@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | IP Address Tracker</title>
 
-  IP Address Tracker
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-  Search for any IP address or domain
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .header-content {
+        min-height: 50vh;
+        width: 100%;
+        background-image: url('/images/pattern-bg.png');
+      }
+
+      .ip-infos {
+        background-color: #fff;
+      }
+
+      .attribution {
+        position: fixed;
+        bottom: 0.5rem;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header-content">
+      <div class="ip-header">
+        <h1 class="ip-title">IP Address Tracker</h1>
+        <input type="text" />
+      </div>
+      <div class="ip-infos">
+        <div class="ip-address">
+          <span>IP ADDRESS</span>
+          <h3>192.212.174.101</h3>
+        </div>
+        <div class="ip-location">
+          <span>LOCATION</span>
+          <h3>Brooklyn, NY 10001</h3>
+        </div>
+        <div class="ip-timezone">
+          <span>TIMEZONE</span>
+          <h3>UTC-05:00</h3>
+        </div>
+        <div class="ip-isp">
+          <span>ISP</span>
+          <h3>SpaceX Starlink</h3>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <div id="map">
+        <!-- Aqui vai ficar o mapa -->
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/wallacycaike">Wachiles</a>.
+    </footer>
+  </body>
 </html>
