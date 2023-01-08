@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body,
+input {
+  font-family: "Rubik", sans-serif;
+}
+
+.header-content {
+  width: 100%;
+  background-image: url("../images/pattern-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.ip-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+}
+.ip-header .ip-title {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.ip-header .search-bar {
+  display: flex;
+  align-items: center;
+}
+.ip-header .search-bar input {
+  min-width: 210px;
+  height: 50px;
+  border: none;
+  border-radius: 0.938rem 0 0 0.938rem;
+  outline: none;
+  padding-inline: 25px;
+  font-size: 1.125rem;
+}
+.ip-header .search-bar .search-btn {
+  border: none;
+  background-color: hsl(0deg, 0%, 17%);
+  border-radius: 0 0.938rem 0.938rem 0;
+  height: 50px;
+  width: 50px;
+}
+
+.ip-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 260px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.938rem;
+  padding-block: 1rem;
+  padding-inline: 25px;
+}
+.ip-infos span {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-block: 40px;
+}
+.ip-infos h3 {
+  margin-top: 5px;
+}
+
+#map {
+  height: 400px;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #000;
+}
+
+.attribution a {
+  color: #000;
+}
+
+/*# sourceMappingURL=styles.css.map */

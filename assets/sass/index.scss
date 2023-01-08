@@ -1,0 +1,95 @@
+@use "./mixins.scss";
+@use "./variables.scss";
+
+.header-content {
+  width: 100%;
+  // height: 25vh;
+
+  background-image: url("../images/pattern-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mixins.flexDisplay(flex, column, center, center);
+  gap: 0.25rem;
+}
+
+.ip-header {
+  @include mixins.flexDisplay(flex, column, center, center);
+
+  width: 100%;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+
+  .ip-title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+
+    input {
+      min-width: 210px;
+      height: 50px;
+      border: none;
+      border-radius: 0.938rem 0 0 0.938rem;
+      outline: none;
+      padding-inline: 25px;
+      font-size: variables.$Font-size-input;
+    }
+
+    .search-btn {
+      border: none;
+      background-color: variables.$Very-Dark-Gray;
+      border-radius: 0 0.938rem 0.938rem 0;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+.ip-infos {
+  @include mixins.flexDisplay(flex, column, center, center);
+
+  gap: 1rem;
+  min-width: 260px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.938rem;
+  padding-block: 1rem;
+  padding-inline: 25px;
+
+  // position: relative;
+  // top: 150px;
+
+  span {
+    color: variables.$Dark-Gray;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-block: 40px;
+  }
+
+  h3 {
+    margin-top: 5px;
+  }
+}
+
+#map {
+  height: 400px;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #000;
+}
+
+.attribution a {
+  color: #000;
+}

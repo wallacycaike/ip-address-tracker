@@ -3,58 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
+    <title>IP Address Tracker</title>
 
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
 
-      .header-content {
-        min-height: 50vh;
-        width: 100%;
-        background-image: url('/images/pattern-bg.png');
-      }
-
-      .ip-infos {
-        background-color: #fff;
-      }
-
-      .attribution {
-        position: fixed;
-        bottom: 0.5rem;
-        text-align: center;
-      }
-
-      .attribution a {
-        color: blue;
-      }
-    </style>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <header class="header-content">
       <div class="ip-header">
         <h1 class="ip-title">IP Address Tracker</h1>
-        <input type="text" />
+        <div class="search-bar">
+          <input
+            type="text"
+            id="ip-input"
+            placeholder="Search for any IP address or domain"
+          />
+          <button class="search-btn">
+            <img src="./assets/images/icon-arrow.svg" alt="search-btn" />
+          </button>
+        </div>
       </div>
       <div class="ip-infos">
         <div class="ip-address">
@@ -76,9 +63,7 @@
       </div>
     </header>
     <main class="main-content">
-      <div id="map">
-        <!-- Aqui vai ficar o mapa -->
-      </div>
+      <div id="map"></div>
     </main>
     <footer class="attribution">
       Challenge by
@@ -86,5 +71,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/wallacycaike">Wachiles</a>.
     </footer>
+
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
