@@ -1,0 +1,19 @@
+.attribution {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #556cd2;
+  font-size: 0.75rem;
+
+  position: fixed;
+  z-index: 2;
+  // top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.attribution a {
+  color: #556cd2;
+}

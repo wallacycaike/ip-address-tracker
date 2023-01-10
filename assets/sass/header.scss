@@ -1,0 +1,135 @@
+@use "./mixins.scss";
+@use "./variables.scss";
+
+.header-content {
+  width: 100%;
+  height: 300px;
+  // padding-block: 15px;
+
+  background-image: url("../images/pattern-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mixins.flexDisplay(flex, column, center, normal);
+
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 800px) {
+    height: 260px;
+  }
+}
+
+.ip-header {
+  @include mixins.flexDisplay(flex, column, center, center);
+
+  width: 85%;
+  gap: 1.3rem;
+  // padding-bottom: 25px;
+  margin-top: 30px;
+
+  @media (min-width: 800px) {
+    width: 700px;
+    margin-top: 40px;
+  }
+
+  .ip-title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    @media (min-width: 800px) {
+      font-size: 2rem;
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // max-width: 700px;
+    width: 100%;
+
+    input {
+      width: 75%;
+      height: 60px;
+      border: none;
+      border-radius: 0.938rem 0 0 0.938rem;
+      outline: none;
+      padding-inline: 25px;
+      font-size: variables.$Font-size-input;
+    }
+
+    .search-btn {
+      cursor: pointer;
+      border: none;
+      background-color: variables.$Very-Dark-Gray;
+      border-radius: 0 0.938rem 0.938rem 0;
+      height: 60px;
+      width: 60px;
+      transition: 0.25s;
+
+      &:hover {
+        background-color: hsl(0, 0%, 27%);
+      }
+    }
+  }
+}
+
+.ip-infos {
+  @include mixins.flexDisplay(flex, column, center, center);
+
+  gap: 1rem;
+  width: 75%;
+  // height: fit-content;
+  // min-height: 150px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.938rem;
+  padding-block: 1.3rem;
+  padding-inline: 25px;
+
+  // position: absolute;
+  // top: 150px;
+
+  position: absolute;
+  top: 150px;
+
+  // margin-top: 10px;
+  margin-top: 20px;
+
+  @media (min-width: 800px) {
+    text-align: start;
+    flex-direction: row;
+    align-items: flex-start;
+    // justify-content: center;
+    padding-block: 1.6rem;
+    top: 170px;
+    // padding-inline: 0;
+
+    > div {
+      width: 100%;
+      padding-inline: 12.5px;
+      min-height: 80px;
+      border-right: 1px solid #ccc;
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  span {
+    color: variables.$Dark-Gray;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-block: 40px;
+  }
+
+  h3 {
+    margin-top: 8px;
+    font-size: 1.25rem;
+  }
+}

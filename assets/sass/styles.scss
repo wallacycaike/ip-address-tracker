@@ -2,6 +2,25 @@
 
 @use "./mixins.scss";
 
-@use "./globals.scss";
+@use "./header.scss";
 
-@use "./index.scss";
+@use "./main.scss";
+
+@use "./footer.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+}
+
+body,
+input {
+  font-family: variables.$Body-font;
+}

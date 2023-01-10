@@ -1,0 +1,13 @@
+// .main-content {
+// }
+
+#map {
+  position: relative;
+  z-index: 1;
+  height: 80vh;
+  width: 100%;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
