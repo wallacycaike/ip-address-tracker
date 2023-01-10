@@ -1,7 +1,9 @@
-export function showMap() {
-  let map = L.map("map", {
-    zoomControl: false,
-  }).setView([51.505, -0.09], 19);
+let map = L.map("map", {
+  zoomControl: false,
+});
+
+export function showMap(lat, lng) {
+  map.setView([lat, lng], 19);
 
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     // maxZoom: 19,
@@ -13,5 +15,5 @@ export function showMap() {
     iconUrl: "assets/images/icon-location.svg",
   });
 
-  L.marker([51.505, -0.09], { icon: markerIcon }).addTo(map);
+  L.marker([lat, lng], { icon: markerIcon }).addTo(map);
 }

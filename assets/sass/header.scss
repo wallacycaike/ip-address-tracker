@@ -4,7 +4,6 @@
 .header-content {
   width: 100%;
   height: 300px;
-  // padding-block: 15px;
 
   background-image: url("../images/pattern-bg.png");
   background-position: center;
@@ -24,20 +23,18 @@
 .ip-header {
   @include mixins.flexDisplay(flex, column, center, center);
 
-  width: 85%;
+  width: 100%;
   gap: 1.3rem;
-  // padding-bottom: 25px;
   margin-top: 30px;
-
-  @media (min-width: 800px) {
-    width: 700px;
-    margin-top: 40px;
-  }
 
   .ip-title {
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 500;
+
+    @media (min-width: 300px) {
+      font-size: 1.6rem;
+    }
 
     @media (min-width: 800px) {
       font-size: 2rem;
@@ -48,20 +45,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // max-width: 700px;
     width: 100%;
 
     input {
-      width: 75%;
+      cursor: pointer;
+      width: 58%;
       height: 60px;
       border: none;
       border-radius: 0.938rem 0 0 0.938rem;
       outline: none;
       padding-inline: 25px;
-      font-size: variables.$Font-size-input;
+      font-size: 16px;
+
+      @media (min-width: 300px) {
+        font-size: variables.$Font-size-input;
+      }
+
+      @media (min-width: 758px) {
+        width: 440px;
+      }
     }
 
-    .search-btn {
+    input.error {
+      border: 2px solid darkred;
+
+      &::placeholder {
+        color: darkred;
+      }
+    }
+
+    button {
       cursor: pointer;
       border: none;
       background-color: variables.$Very-Dark-Gray;
@@ -82,36 +95,28 @@
 
   gap: 1rem;
   width: 75%;
-  // height: fit-content;
-  // min-height: 150px;
   text-align: center;
   background-color: #fff;
   border-radius: 0.938rem;
   padding-block: 1.3rem;
   padding-inline: 25px;
 
-  // position: absolute;
-  // top: 150px;
-
   position: absolute;
   top: 150px;
 
-  // margin-top: 10px;
   margin-top: 20px;
 
   @media (min-width: 800px) {
     text-align: start;
     flex-direction: row;
     align-items: flex-start;
-    // justify-content: center;
     padding-block: 1.6rem;
     top: 170px;
-    // padding-inline: 0;
 
     > div {
       width: 100%;
       padding-inline: 12.5px;
-      min-height: 80px;
+      min-height: 85px;
       border-right: 1px solid #ccc;
 
       &:last-child {
@@ -120,16 +125,28 @@
     }
   }
 
+  @media (min-width: 1440px) {
+    width: 1080px;
+  }
+
   span {
     color: variables.$Dark-Gray;
     font-size: 0.6rem;
     letter-spacing: 2px;
     font-weight: 700;
     margin-block: 40px;
+
+    @media (min-width: 1200px) {
+      font-size: 0.7rem;
+    }
   }
 
   h3 {
     margin-top: 8px;
     font-size: 1.25rem;
+
+    @media (min-width: 1200px) {
+      font-size: 1.55rem;
+    }
   }
 }
